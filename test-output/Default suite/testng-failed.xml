@@ -3,21 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="febTestNg2023.CreateAccount">
+      <class name="Tests.OpenSignUp">
         <methods>
           <include name="terminate"/>
           <include name="BrowserConfig"/>
-          <include name="EnterEmail"/>
           <include name="BrowserClosing"/>
-          <include name="ClickSignIn"/>
-          <include name="EnterUserName"/>
+          <include name="testlogin"/>
           <include name="config"/>
           <include name="setup"/>
-          <include name="Submit"/>
           <include name="Synchronize"/>
           <include name="validations"/>
         </methods>
-      </class> <!-- febTestNg2023.CreateAccount -->
+      </class> <!-- Tests.OpenSignUp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

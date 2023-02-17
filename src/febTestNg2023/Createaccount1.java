@@ -1,17 +1,10 @@
 package febTestNg2023;
 
-import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.annotations.Test;
 
-
-
-
-
-@Test
-public class CreateAccount extends Controler {
-	
-	
+public class Createaccount1 extends Controler {
 	@Test(priority = 0)
 	public void OpenBroweser() { //1st Step of the test case
 		driver.get(AppUrl);

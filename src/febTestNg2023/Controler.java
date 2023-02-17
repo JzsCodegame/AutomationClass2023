@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -14,22 +15,28 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Controler {
 
-	WebDriver driver;
+public static WebDriver driver;
 	String AppUrl;
 	WebDriverWait Ex;
-	WebElement UserName;
+	//WebElement UserName;
 	
 	@BeforeSuite()
 	public void config() {
 	
-	System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+	//System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+	
 	AppUrl = "https://automationexercise.com/";
 	
 }
 	@BeforeTest()
 	public void setup() {
+		//ChromeOptions options = new ChromeOptions();
+		//options.addArguments("--headless");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 	}
 	
@@ -54,12 +61,12 @@ public class Controler {
 	@AfterTest()
 	public void BrowserClosing() throws InterruptedException {
 		Thread.sleep(2000); //We use thread.sleep to make Java wait so we can see our execution results.
-		driver.close();// We close the browser
+		//driver.close();// We close the browser
 		
 	}
 	@AfterSuite
 	public void terminate() {
-		driver.quit(); // We close the instance and terminate the session. It will erase all the cache memory and make our next execution better.
+		//driver.quit(); // We close the instance and terminate the session. It will erase all the cache memory and make our next execution better.
 	}
 	
 }
