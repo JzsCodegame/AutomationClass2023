@@ -24,7 +24,7 @@ public class Controler {
 	@BeforeSuite()
 	public void config() {
 	
-	System.setProperty("webdriver.chrome.driver","C:\\Program Files\\Java\\jdk-19\\Selenium Tools\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver","chromedriver.exe");
 	AppUrl = "https://automationexercise.com/";
 	
 }

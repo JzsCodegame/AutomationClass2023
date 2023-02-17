@@ -7,12 +7,12 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk-19/Selenium Tools/libs/byte-buddy-1.8.15.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk-19/Selenium Tools/libs/client-combined-3.141.59.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk-19/Selenium Tools/libs/client-combined-3.141.59-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk-19/Selenium Tools/libs/commons-exec-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk-19/Selenium Tools/libs/guava-25.0-jre.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk-19/Selenium Tools/libs/okhttp-3.11.0.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk-19/Selenium Tools/libs/okio-1.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/tools/SeleniumVersion/PreAlpha/libs/byte-buddy-1.8.15.jar"/>
+	<classpathentry kind="lib" path="C:/tools/SeleniumVersion/PreAlpha/libs/client-combined-3.141.59.jar"/>
+	<classpathentry kind="lib" path="C:/tools/SeleniumVersion/PreAlpha/libs/client-combined-3.141.59-sources.jar"/>
+	<classpathentry kind="lib" path="C:/tools/SeleniumVersion/PreAlpha/libs/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/tools/SeleniumVersion/PreAlpha/libs/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="C:/tools/SeleniumVersion/PreAlpha/libs/okhttp-3.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/tools/SeleniumVersion/PreAlpha/libs/okio-1.14.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
