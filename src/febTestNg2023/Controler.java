@@ -1,9 +1,12 @@
 package febTestNg2023;
 
-import java.util.concurrent.TimeUnit;
+
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,15 +20,22 @@ import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+//import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Controler {
 
-public static WebDriver driver;
-	String AppUrl;
+public WebDriver driver;
+	public static String AppUrl;
 	WebDriverWait Ex;
+//	public static ExtentReports extentReports;
+ //   public static ExtentTest extentTest;
 	//WebElement UserName;
 	
 	@BeforeSuite()
 	public void config() {
+	//	 ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(new File(System.getProperty("user.dir") + "/Reports/ExtentReport.html"));
+	 //       extentReports = new ExtentReports();
+	        //extentReports.attachReporter(htmlReporter);
 	
 	//System.setProperty("webdriver.chrome.driver","chromedriver.exe");
 	
@@ -34,15 +44,15 @@ public static WebDriver driver;
 }
 	@BeforeTest()
 	public void setup() {
-		//ChromeOptions options = new ChromeOptions();
-		//options.addArguments("--headless");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new");
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 	}
 	
 	@BeforeClass
 	 public void Synchronize() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		Ex = new WebDriverWait(driver, 10);
 	}
 	
@@ -60,10 +70,21 @@ public static WebDriver driver;
     }
 	@AfterTest()
 	public void BrowserClosing() throws InterruptedException {
-		Thread.sleep(2000); //We use thread.sleep to make Java wait so we can see our execution results.
-		//driver.close();// We close the browser
+		String testNgReportPath = "test-output\\index.html"; // Replace with the path to your TestNG report
+
+        File reportFile = new File(testNgReportPath);
+        if (!reportFile.exists()) {
+            System.out.println("Report file not found: " + testNgReportPath);
+            return;
+        }
+
+        try {
+            Desktop.getDesktop().browse(reportFile.toURI());
+        } catch (IOException e) {
+            System.out.println("Error opening report file: " + e.getMessage());
+        }
+    }
 		
-	}
 	@AfterSuite
 	public void terminate() {
 		//driver.quit(); // We close the instance and terminate the session. It will erase all the cache memory and make our next execution better.
