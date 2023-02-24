@@ -19,8 +19,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Controler {
 
-public static WebDriver driver;
-	String AppUrl;
+public WebDriver driver;
+	 public static String AppUrl;
 	WebDriverWait Ex;
 	//WebElement UserName;
 	
