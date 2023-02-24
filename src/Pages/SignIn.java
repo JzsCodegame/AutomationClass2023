@@ -7,7 +7,7 @@ import febTestNg2023.Controler;
 
 public class SignIn extends Controler {
 
-	By SignIn = By.xpath("//*[@id=\\\"header\\\"]/div/div/div/div[2]/div/ul/li[4]/a");
+	By SignIn = By.xpath("//*[@id='header']/div/div/div/div[2]/div/ul/li[4]/a");
 	By UserName = By.xpath("//input[@name='name']");
 	By EnterEmail= By.xpath("//input[starts-with(@data-qa, 'signup')][position()=2]");
 	By SubmitButton= By.xpath("//button[contains(@data-qa,'signup-button')]");
@@ -18,8 +18,16 @@ public class SignIn extends Controler {
 		super();
 		this.driver = driver;
 		
+		
 	}
-	  public String getSignInTitle() {
+	
+	public void OpenApp(String AppUrls) {
+		driver.get(AppUrls);	
+		}
+	  
+	
+	
+public String getSignInTitle() {
 
 	      return driver.getTitle();
 	    }
@@ -55,7 +63,8 @@ public class SignIn extends Controler {
 
 	    }
 	    
-	    public void fillupformSignIn(String usernameX, String emailX) {
+	    public void fillupformSignIn(String AppUrls, String usernameX, String emailX) {
+	    	this.OpenApp(AppUrls);
 	    	this.ClickSignIn();
 	    	this.EnterUserName(usernameX);
 	    	this.EnterEmailAddress(emailX);
