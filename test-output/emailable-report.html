@@ -8,63 +8,29 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">5,507</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite - AutomationExercise</th></tr>
+<tr><td><a href="#t0">Sprint1</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">9,449</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests.OpenSignUp</td><td><a href="#m0">testlogin</a></td><td rowspan="1">1676603281717</td><td rowspan="1">56</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite - AutomationExercise</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Sprint1 &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">Tests.FillSignUpForm</td><td><a href="#m0">Synchronize</a></td><td rowspan="1">1677808977537</td><td rowspan="1">1</td></tr><tr><th colspan="4">Sprint1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests.OpenSignUp</td><td><a href="#m1">testlogin</a></td><td rowspan="1">1677808977515</td><td rowspan="1">14</td></tr><tr><th colspan="4">Sprint1 &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">Tests.FillSignUpForm</td><td><a href="#m2">BrowserConfig</a></td><td rowspan="1">1677808977541</td><td rowspan="1">-1677808977541</td></tr><tr class="skippedeven"><td><a href="#m3">validations</a></td><td rowspan="1">1677808977546</td><td rowspan="1">-1677808977546</td></tr><tr><th colspan="4">Sprint1 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">Tests.FillSignUpForm</td><td><a href="#m4">testSignUp</a></td><td rowspan="1">1677808977543</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Tests.OpenSignUp#testlogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //*[@id=\&quot;header\&quot;]/div/div/div/div[2]/div/ul/li[4]/a because of the following error:
-SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//*[@id=\&quot;header\&quot;]/div/div/div/div[2]/div/ul/li[4]/a&apos; is not a valid XPath expression.
-  (Session info: chrome=110.0.5481.104)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;DESKTOP-Q59R3VD&apos;, ip: &apos;192.168.12.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.104, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\jzo_0\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62205}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ba065e42d9c57d9c0a21201ad4a6aa60
-*** Element info: {Using=xpath, value=//*[@id=\&quot;header\&quot;]/div/div/div/div[2]/div/ul/li[4]/a}
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at Pages.SignIn.ClickSignIn(SignIn.java:29)
-	at Pages.SignIn.fillupformSignIn(SignIn.java:59)
-	at Tests.OpenSignUp.testlogin(OpenSignUp.java:18)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<h2>Sprint1</h2><h3 id="m0">Tests.FillSignUpForm#Synchronize</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.manage()&quot; because &quot;this.driver&quot; is null
+	at febTestNg2023.Controler.Synchronize(Controler.java:67)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Tests.OpenSignUp#testlogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;Object.getClass()&quot; because &quot;page&quot; is null
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:103)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at febTestNg2023.Validations.&lt;init&gt;(Validations.java:23)
+	at Pages.SignIn.&lt;init&gt;(SignIn.java:23)
+	at Tests.OpenSignUp.testlogin(OpenSignUp.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Tests.FillSignUpForm#BrowserConfig</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Tests.FillSignUpForm#validations</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Tests.FillSignUpForm#testSignUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.manage()&quot; because &quot;this.driver&quot; is null
+	at febTestNg2023.Controler.Synchronize(Controler.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -4,9 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import febTestNg2023.Controler;
+import febTestNg2023.Validations;
 
 public class SignIn extends Controler {
-
+	Validations validate; 
+	SignUp Page;
+	
 	By SignIn = By.xpath("//*[@id='header']/div/div/div/div[2]/div/ul/li[4]/a");
 	By UserName = By.xpath("//input[@name='name']");
 	By EnterEmail= By.xpath("//input[starts-with(@data-qa, 'signup')][position()=2]");
@@ -17,7 +20,7 @@ public class SignIn extends Controler {
 	public SignIn(WebDriver driver) {
 		super();
 		this.driver = driver;
-		
+		validate = new Validations(driver, EnterEmail, Page);
 		
 	}
 	
@@ -35,7 +38,8 @@ public String getSignInTitle() {
 	  public void ClickSignIn() {
 
 	       driver.findElement(SignIn).click();
-
+	       
+	   	validate.assertElementPresent(SignIn);;
 	    }
 	  
 	    //Set email in email textbox
@@ -44,6 +48,7 @@ public String getSignInTitle() {
 	  public void EnterUserName(String username) {
 
 	       driver.findElement(UserName).sendKeys(username);
+	       validate.assertTrue(true, username);
 	       
 
 	    }
@@ -51,15 +56,22 @@ public String getSignInTitle() {
 	  public void EnterEmailAddress(String email) {
 
 	       driver.findElement(EnterEmail).sendKeys(email);
+	       try {
+	           Thread.sleep(2000); // wait for 1 second to allow the input field to be updated
+	       } catch (InterruptedException e) {
+	           e.printStackTrace();
+	       }
 	       
+	       validate.assertXpath(EnterEmail, email);
 
 	    }
 	    
 	  //Click on Craete Account button
 
 	    public void clickAccountButton() {
-
+	    	validate.assertElementSelected(SubmitButton);
 	            driver.findElement(SubmitButton).click();
+	            
 
 	    }
 	    
