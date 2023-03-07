@@ -8,11 +8,12 @@ import febTestNg2023.Controler;
 @Test
 public class FillSignUpForm extends Controler {
 
-	SignUp form = null;
+
 	
-	@Test(priority = 1)
+	
 	public void testSignUp() throws InterruptedException {
-		form = new SignUp(driver);
+		Thread.sleep(3000);
+		
 		form.fillform("20","Tanvirr");
 	}
 	

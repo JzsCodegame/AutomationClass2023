@@ -14,13 +14,12 @@ import Pages.SignUp;
 
 public class Validations extends Controler {
 
-	private SignUp Page;
+	 //private SignUp Page;
     
-	public Validations(WebDriver driver, By enterEmail, SignUp Page) {     //, By enterEmail) 
-    	super();        
+	public Validations(WebDriver driver, By by) {     //, By enterEmail)         
     	this.driver = driver;
-    	this.Page = Page;
-    	PageFactory.initElements(driver, Page);
+    	//this.Page = Page;
+    	//PageFactory.initElements(driver, Page);
     }
 	
 	

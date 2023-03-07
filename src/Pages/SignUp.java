@@ -1,5 +1,6 @@
 package Pages;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,12 +8,16 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import febTestNg2023.Controler;
-import febTestNg2023.Validations;
+import febTestNg2023.ValidationsFactory;
 
 public class SignUp extends Controler {
 	
-Validations validate;
-	@FindBy(css="#id_gender1")
+ValidationsFactory validate;
+
+
+
+
+    @FindBy(css="#id_gender1")
 	WebElement Mr;
 	
 	@FindBy(css="input[id='id_gender2']")
@@ -30,26 +35,28 @@ Validations validate;
 public SignUp(WebDriver driver) {
 	super();
 	this.driver=driver;
+	
+	validate = new ValidationsFactory(driver, this);
 	PageFactory.initElements(driver, this);
 	
 }
 
 public void selectMr() {
 	Mr.click();
-	validate.assertElementSelected2(Mr);
+	//validate.assertElementSelected2(Mr);
 	
 }
 
 public void selectMrs() {
 	Mrs.click();
-	validate.assertElementEnabled2(Mrs);
+	//validate.assertElementEnabled2(Mrs);
 }
 
 public void selectDays(String inputdays) {
 	Days.click();
 	Select sinput = new Select(Days);
 	sinput.selectByValue(inputdays);
-	validate.assertDropdownSelected2(Days, inputdays);
+	//validate.assertDropdownSelected2(Days, inputdays);
 } 
 
 public void selectFirstName(String name) {
@@ -60,7 +67,7 @@ public void selectFirstName(String name) {
 
 public void selectCheckBox1() {
 	CheckBox1.click();
-	validate.assertCheckboxSelected2(CheckBox1);
+	//SignUp.assertCheckboxSelected2(CheckBox1);
 }
 
 

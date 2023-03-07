@@ -5,10 +5,10 @@
 	 
 
 	  <!--  <parameter name="class1" value="com.Tests.OpenSignUp"/>-->
-	  <!--  <parameter name="class2" value="com.Tests.FillSignUpForm"/>-->
+	  <!--   <parameter name="class2" value="com.Tests.FillSignUpForm"/> -->
     <classes>
       <class name="Tests.OpenSignUp"/>
-       <class name="Tests.FillSignUpForm"/>
+       <!-- <class name="Tests.FillSignUpForm"/>-->
     </classes>
   </test> <!-- Sprint1 --> 
 

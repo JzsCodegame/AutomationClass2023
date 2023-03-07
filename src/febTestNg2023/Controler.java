@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 import javax.imageio.ImageIO;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -27,17 +28,23 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
+import Pages.SignIn;
+import Pages.SignUp;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 //import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Controler {
 
-public WebDriver driver;
-
-	 public static String AppUrl;
-
-	WebDriverWait Ex;
+	public WebDriver driver; 
+		public static String AppUrl;
+			public JavascriptExecutor js1;
+				public WebDriverWait Ex;
+					public ChromeOptions options;
+						public SignIn login;
+							public SignUp form;
+	
+	
 //	public static ExtentReports extentReports;
  //   public static ExtentTest extentTest;
 	//WebElement UserName;
@@ -51,37 +58,41 @@ public WebDriver driver;
 	//System.setProperty("webdriver.chrome.driver","chromedriver.exe");
 	
 	AppUrl = "https://automationexercise.com/";
+	options = new ChromeOptions();
+	options.addArguments("--headless=new");
 	
 }
 	@BeforeTest()
 	public void setup() {
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless=new");
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver(options);
+	WebDriverManager.chromedriver().setup();
+	driver = new ChromeDriver(options);
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	login = new SignIn(driver);
+	form = new SignUp(driver);
 	}
 	
 	@BeforeClass
 	 public void Synchronize() {
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		
 	}
 	
 	@BeforeMethod() 
 	public void BrowserConfig() {
-		driver.manage().window().maximize(); //We maximize or change browser based on our preference.
-		//Ex = new WebDriverWait(driver, 15);
+		 //We maximize or change browser based on our preference.
+		Ex = new WebDriverWait(driver, 15);
 	}
 	
 	@AfterMethod()
 	public void validations(){
     	System.out.println("Validations succesfully");// We validate our code executions.
     	System.out.println("Method executed succesfully");
-    	Ex = new WebDriverWait(driver, 10);
+    	//Ex = new WebDriverWait(driver, 10);
     }
 	@AfterTest()
 	public void BrowserClosing() throws InterruptedException, IOException, AWTException {
+		
 	    String testNgReportPath = "test-output\\index.html"; // Replace with the path to your TestNG report
 
 	    File reportFile = new File(testNgReportPath);
@@ -92,6 +103,7 @@ public WebDriver driver;
 
 	    try {
 	        Desktop.getDesktop().browse(reportFile.toURI());
+	    	//js1.executeScript("window.open('test-output\\index.html')");
 	        Thread.sleep(5000); // Wait for the page to load
 
 	        // Capture the screenshot

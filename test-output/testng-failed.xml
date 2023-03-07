@@ -15,18 +15,6 @@
           <include name="validations"/>
         </methods>
       </class> <!-- Tests.FillSignUpForm -->
-      <class name="Tests.OpenSignUp">
-        <methods>
-          <include name="terminate"/>
-          <include name="BrowserConfig"/>
-          <include name="BrowserClosing"/>
-          <include name="testlogin"/>
-          <include name="config"/>
-          <include name="setup"/>
-          <include name="Synchronize"/>
-          <include name="validations"/>
-        </methods>
-      </class> <!-- Tests.OpenSignUp -->
     </classes>
   </test> <!-- Sprint1(failed) -->
 </suite> <!-- Failed suite [Suite - AutomationExercise] -->

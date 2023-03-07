@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite___AutomationExercise" class="navigator-link">
-              <span class="suite-name border-failed">Suite - AutomationExercise</span>
+              <span class="suite-name border-passed">Suite - AutomationExercise</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,35 +93,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,  1 skipped,  </span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite___AutomationExercise" class="hide-methods failed suite-Suite___AutomationExercise"> (hide)</a> <!-- hide-methods failed suite-Suite___AutomationExercise -->
-                      <a href="#" panel-name="suite-Suite___AutomationExercise" class="show-methods failed suite-Suite___AutomationExercise"> (show)</a> <!-- show-methods failed suite-Suite___AutomationExercise -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite___AutomationExercise" class="hide-methods passed suite-Suite___AutomationExercise"> (hide)</a> <!-- hide-methods passed suite-Suite___AutomationExercise -->
+                      <a href="#" panel-name="suite-Suite___AutomationExercise" class="show-methods passed suite-Suite___AutomationExercise"> (show)</a> <!-- show-methods passed suite-Suite___AutomationExercise -->
                     </span>
-                    <div class="method-list-content failed suite-Suite___AutomationExercise">
+                    <div class="method-list-content passed suite-Suite___AutomationExercise">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite___AutomationExercise" title="Tests.OpenSignUp" class="method navigator-link" hash-for-method="testSignUp">testSignUp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite___AutomationExercise" title="Tests.OpenSignUp" class="method navigator-link" hash-for-method="testlogin">testlogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite___AutomationExercise -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite___AutomationExercise" class="hide-methods skipped suite-Suite___AutomationExercise"> (hide)</a> <!-- hide-methods skipped suite-Suite___AutomationExercise -->
-                      <a href="#" panel-name="suite-Suite___AutomationExercise" class="show-methods skipped suite-Suite___AutomationExercise"> (show)</a> <!-- show-methods skipped suite-Suite___AutomationExercise -->
-                    </span>
-                    <div class="method-list-content skipped suite-Suite___AutomationExercise">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite___AutomationExercise" title="Tests.FillSignUpForm" class="method navigator-link" hash-for-method="testSignUp">testSignUp</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Suite___AutomationExercise -->
+                    </div> <!-- method-list-content passed suite-Suite___AutomationExercise -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -133,35 +124,10 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite___AutomationExercise" class="panel Suite___AutomationExercise">
-          <div class="suite-Suite___AutomationExercise-class-failed">
+          <div class="suite-Suite___AutomationExercise-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">Tests.OpenSignUp</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testlogin">
-                  </a> <!-- testlogin -->
-                  <span class="method-name">testlogin</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;Object.getClass()&quot; because &quot;page&quot; is null
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:103)
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
-	at febTestNg2023.Validations.&lt;init&gt;(Validations.java:23)
-	at Pages.SignIn.&lt;init&gt;(SignIn.java:23)
-	at Tests.OpenSignUp.testlogin(OpenSignUp.java:19)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite___AutomationExercise-class-failed -->
-          <div class="suite-Suite___AutomationExercise-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">Tests.FillSignUpForm</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -169,15 +135,17 @@
                   <a name="testSignUp">
                   </a> <!-- testSignUp -->
                   <span class="method-name">testSignUp</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.manage()&quot; because &quot;this.driver&quot; is null
-	at febTestNg2023.Controler.Synchronize(Controler.java:67)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 23 stack frames
-</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testlogin">
+                  </a> <!-- testlogin -->
+                  <span class="method-name">testlogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite___AutomationExercise-class-skipped -->
+          </div> <!-- suite-Suite___AutomationExercise-class-passed -->
         </div> <!-- panel Suite___AutomationExercise -->
         <div panel-name="test-xml-Suite___AutomationExercise" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -191,7 +159,6 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Sprint1&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Tests.OpenSignUp&quot;/&gt;
-      &lt;class name=&quot;Tests.FillSignUpForm&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Sprint1 --&gt;
 &lt;/suite&gt; &lt;!-- Suite - AutomationExercise --&gt;
@@ -205,7 +172,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Sprint1 (2 classes)</span>
+                <span class="test-name">Sprint1 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -235,16 +202,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testlogin')
 data.setCell(0, 2, 'Tests.OpenSignUp')
-data.setCell(0, 3, 14);
+data.setCell(0, 3, 19320);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testSignUp')
-data.setCell(1, 2, 'Tests.FillSignUpForm')
-data.setCell(1, 3, 0);
+data.setCell(1, 2, 'Tests.OpenSignUp')
+data.setCell(1, 3, 7185);
 window.suiteTableData['Suite___AutomationExercise']= { tableData: data, tableDiv: 'times-div-Suite___AutomationExercise'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 ms</span>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
               <div id="times-div-Suite___AutomationExercise">
               </div> <!-- times-div-Suite___AutomationExercise -->
             </div> <!-- times-div -->
@@ -255,26 +222,19 @@ return data;
             <span class="header-content">Reporter output for Suite - AutomationExercise</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testlogin</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test completed successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite___AutomationExercise" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Tests.FillSignUpForm</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">terminate</span>
-                <br/>
-                <span class="ignored-method-name">BrowserClosing</span>
-                <br/>
-                <span class="ignored-method-name">config</span>
-                <br/>
-                <span class="ignored-method-name">setup</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite___AutomationExercise" class="panel">
@@ -290,57 +250,43 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
-                <span class="method-start">11 ms</span>
+                <span class="method-start">21 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">Synchronize</span>
-                <span class="method-start">1964 ms</span>
+                <span class="method-start">17779 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">BrowserConfig</span>
-                <span class="method-start">1980 ms</span>
+                <span class="method-start">17792 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testlogin</span>
-                <span class="method-start">2092 ms</span>
+                <span class="method-start">17817 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">validations</span>
-                <span class="method-start">2109 ms</span>
+                <span class="method-start">37142 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Tests.FillSignUpForm</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">Synchronize</span>
-                <span class="method-start">2114 ms</span>
-              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">BrowserConfig</span>
-                <span class="method-start">2118 ms</span>
+                <span class="method-start">37147 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testSignUp</span>
-                <span class="method-start">2120 ms</span>
+                <span class="method-start">37147 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">validations</span>
-                <span class="method-start">2123 ms</span>
+                <span class="method-start">44333 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Tests.OpenSignUp</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">BrowserClosing</span>
-                <span class="method-start">2125 ms</span>
+                <span class="method-start">44334 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">terminate</span>
-                <span class="method-start">9487 ms</span>
+                <span class="method-start">61046 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

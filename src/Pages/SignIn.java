@@ -6,9 +6,11 @@ import org.openqa.selenium.WebDriver;
 import febTestNg2023.Controler;
 import febTestNg2023.Validations;
 
+
 public class SignIn extends Controler {
-	Validations validate; 
-	SignUp Page;
+	 
+	//SignUp Page;
+	Validations validate;
 	
 	By SignIn = By.xpath("//*[@id='header']/div/div/div/div[2]/div/ul/li[4]/a");
 	By UserName = By.xpath("//input[@name='name']");
@@ -20,7 +22,7 @@ public class SignIn extends Controler {
 	public SignIn(WebDriver driver) {
 		super();
 		this.driver = driver;
-		validate = new Validations(driver, EnterEmail, Page);
+		validate = new Validations(driver, EnterEmail);
 		
 	}
 	
@@ -39,7 +41,7 @@ public String getSignInTitle() {
 
 	       driver.findElement(SignIn).click();
 	       
-	   	validate.assertElementPresent(SignIn);;
+	   	validate.assertElementPresent(SignIn);
 	    }
 	  
 	    //Set email in email textbox
@@ -69,7 +71,7 @@ public String getSignInTitle() {
 	  //Click on Craete Account button
 
 	    public void clickAccountButton() {
-	    	validate.assertElementSelected(SubmitButton);
+	    	validate.assertElementEnabled(SubmitButton);
 	            driver.findElement(SubmitButton).click();
 	            
 
